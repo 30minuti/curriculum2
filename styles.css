@@ -1,0 +1,277 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: #222;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .navbar .nav-links {
+    list-style: none;
+    text-align: center;
+  }
+  .navbar .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  .navbar .nav-links a:hover {
+    color: #f4f4f4;
+  }
+  
+  /* Header */
+  .header {
+    background: #333;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    
+  }
+
+  /* Animazione per il contenuto */
+.container {
+    opacity: 0; /* Impostiamo la trasparenza iniziale */
+    transform: translateY(50px); /* Partiamo un po' più in basso */
+    animation: fadeInUp 1.5s ease-out forwards; /* Applicazione dell'animazione */
+  }
+  
+  /* Keyframes per l'animazione */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Comincia più in basso */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Termina nella posizione normale */
+    }
+  }
+  
+  /* Animazione per il titolo h1 */
+  .container h1 {
+    opacity: 0; /* Impostiamo la trasparenza iniziale */
+    transform: translateX(-50px); /* Partiamo da sinistra */
+    animation: fadeInLeft 1s ease-out 0.5s forwards; /* Animazione con ritardo */
+  }
+  
+  /* Keyframes per l'animazione del titolo */
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animazione per l'immagine */
+  .container img {
+    opacity: 0;
+    transform: scale(0.8); /* Partiamo con una dimensione più piccola */
+    animation: fadeInScale 1.5s ease-out 1s forwards; /* Ritardo maggiore */
+  }
+  
+  /* Keyframes per l'animazione dell'immagine */
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Animazione per il paragrafo */
+  .container p {
+    opacity: 0;
+    transform: translateX(50px); /* Partiamo da destra */
+    animation: fadeInRight 1s ease-out 1.5s forwards; /* Ritardo maggiore */
+  }
+  
+  /* Keyframes per l'animazione del paragrafo */
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  .header p {
+    font-size: 1.3em;
+  }
+  /* Stile per l'immagine del profilo */
+.profile-pic {
+    width: 150px; /* Larghezza desiderata */
+    height: 150px; /* Altezza desiderata */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    object-fit: cover; /* Assicura il ridimensionamento senza distorsione */
+    border: 3px solid #222; /* Bordo sottile per migliorare l'estetica */
+}
+
+  /* Section */
+  .section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 40px 0;
+  }
+  .section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    position: relative;
+  }
+  .section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #222;
+    display: block;
+    margin: 10px auto 0;
+  }
+  
+  /* Resume Items */
+  .resume-item {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  .resume-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  .resume-item .date {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+  }
+  
+  /* Skills List */
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  .skills-list li {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9em;
+  }
+  
+  /* Carousel */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .carousel-button-left {
+    left: 10px;
+  }
+  .carousel-button-right {
+    right: 10px;
+  }
+  
+  /* Contact Form */
+  #contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .form-control {
+    margin-bottom: 15px;
+  }
+  .form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .form-control input,
+  .form-control textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  #contact-form button {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+  }
+  #contact-form button:hover {
+    background: #444;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
