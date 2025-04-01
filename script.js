@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCarousel();
     }, 5000);
   
+    
+    
     // Contact form simulation
     const form = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
@@ -57,3 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 2000);
     });
   });
+
+  
